@@ -1,0 +1,127 @@
+{% load static %}
+<link rel = "stylesheet" href = "{% static 'css/login.css' %}">
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Login Page Template</title>
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="loginn.css">
+ 
+</head>
+<body>
+    <header>
+        <img src="{% static 'media/C:\Users\Manar\Desktop\prooo\mysite\mysite\static\images\scarfia.PNG'  %}" alt="">
+        
+      <nav>
+       
+        <ul>
+        <li>  <a href="#"><i class="fa fa-search" style="font-size:20px"></i></a></li>
+          <li> <span> <a href="{% url 'home' %}">Home</a> </span> </li>
+          <li> <span> <a href="{% url 'login' %}">Shop</a> </span> </li>
+          <li> <span> <a href="{% url 'home' %}">About Us</a> </span> </li>
+          <li> <span> <a href="{% url 'login' %}">Register</a> </span> </li>
+        </ul>
+       
+      </nav>
+    </header>
+
+    <div class="main-container">
+        <div class="form-container">
+
+           
+            <div class="form-body">
+                <h2 class="title">Log in with</h2>
+                <div class="social-login">
+                    <ul>
+                        <li class="google"><a href="#">Google</a></li>
+                        <li class="fb"><a href="#">Facebook</a></li>
+                    </ul>
+                </div><!-- SOCIAL LOGIN -->
+
+                <div class="_or">or</div>
+
+                {% comment %} <form method="POST" action="" class="the-form">
+                     {% csrf_token %}
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                    
+                    <a href="{% url 'hali' %}" class="button">login</a>
+                   
+
+                </form> {% endcomment %}
+
+                <form class="form" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Login</button>
+               </form>
+
+                   
+
+            </div><!-- FORM BODY-->
+
+            <div class="form">
+                <div>
+                    <span>Don't have an account?</span> <a href="{% url 'signup' %}">Sign Up</a>
+                </div>
+            </div><!-- FORM FOOTER -->
+
+        </div><!-- FORM CONTAINER -->
+    </div>
+    
+</section>
+
+
+<div class="footer">
+    <div class="col-1">
+     <h3>useful links</h3>
+
+
+     <a href="#">About</a>
+     <a href="#">Services</a>
+     <a href="#">Contact</a>
+     <a href="#">Shop</a>
+     <a href="#">profile</a>
+    </div>
+
+   <div class="col-2">
+      <h3>Newsettler</h3>
+
+ 
+     <input type="text" placeholder="your email address" required>
+     <br>
+     <button type="submit">Subscribe now</button>
+    </div>
+
+   <div class="col-3">
+
+     <h3>Contact us</h3>
+     <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt </p>
+     <p><i class="fas fa-phone"></i> Phone:01010036560</p>
+     <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">info@Scarfyo.com</a></p>
+
+     <div class="social-icons">
+      <a href="#" class="fa fa-facebook"></a>  
+      <a href="#" class="fa fa-twitter"></a>  
+      <a href="#" class="fa fa-pinterest"></a>    
+      <a href="#" class="fa fa-instagram"></a>  
+       </div>
+
+    </div>
+  
+
+</div>
+  
+</body>
+</html>

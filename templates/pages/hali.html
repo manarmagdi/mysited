@@ -1,0 +1,191 @@
+{% load static %}
+<link rel = "stylesheet" href = "{% static 'css/hali.css' %}">
+
+
+<html>
+  <head>
+    <title>Online Product Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <header>
+      <img src="{% static 'media/C:\Users\Manar\Desktop\prooo\mysite\mysite\static\images\scarfia.PNG'  %}" alt="" >
+      
+    <nav>
+     
+      <ul>
+      <li>  <a href="#"><i class="fa fa-search" style="font-size:20px"></i></a></li>
+        <li><a href="{% url 'hali' %}">Home</a></li>
+        <li><a href="{% url 'hali' %}">About Us</a></li>
+        <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart" style="font-size:20px"></i></a></li>
+        <li><a href="{% url 'profile' %}"><i class="fa fa-user" style="font-size:24px"></i></a></li>
+      </ul>
+     
+    </nav>
+  </header>
+    
+    <main>
+
+
+      <section class="hero">
+        <img src="{% static 'images/home.jpg' %}" alt=" ">
+        
+        <a href="#" class="btn">Shop Now</a>
+      </section>
+     
+      
+
+<div class="pro">
+  
+      <div class="product-card">
+     
+        <span> <a href= "{% url 'shopnow' %}"> <img src="{% static 'images/try.webp' %}" alt=" "> </a> </span>
+        <h1> Our Scarfs</h1>
+
+        
+        
+       
+        </div>
+       
+      
+        <div class="product-card">
+      
+          <span> <a href= "{% url 'hijab' %}"> <img src="{% static 'images/ne.jpg'  %}" alt= " "> </a> </span>
+          <h1>Prayer Dresses</h1>
+        
+          
+          </div>
+
+        </div>
+
+      <div class="product">
+
+        <h3>Our best selling</h3>
+      </div>
+
+
+
+      <section class="products">
+        <ul>
+          <li>
+            <img src="{% static 'images/Orient Rosé in Satin.webp' %}" alt=" ">
+            <h4>Orient Rosé in Satin</h4>
+<p>The design of this Moroccan Islamic beauty is even more popping now & it’ll just bring your outfit to life as it’s featured on our luxurious satin fabric that brings the colors & design to life, and adds a richer look to your outfit. Its beautiful intricate details cannot go unnoticed. ⁣</p>
+
+            <a href="#" class="button">Add to cart</a>
+          </li>
+          <li>
+            <img src="{% static 'images/prayerdressesabele.jpg' %}" alt=" ">
+            <h4>Prayer dress Isabelle</h4>
+            <p>The Queen of all Jokers is back in an upgraded version! It comes in new dimensions that makes it longer and less bulky. It’s edgy & minimalistic design makes it an iconic must-have scarf!
+
+              Two years in the making, we finally bring you a design that is modern.
+              Its beautiful intricate details cannot go unnoticed.</p>
+            <a href="#" class="button">Add to cart</a>
+          </li>
+          <li>
+            <img src="{% static 'images/love2.webp' %}" alt=" ">
+            <h4>Love me nude</h4>
+            <p>The Prophet ﷺ said: “الأرواح جنود مجندة فما تعارف منها ائتلف، وما تناكر منها اختلف ”
+
+              Some souls we meet, are just too special, and it feels like we’ve known them for a long time, they make life easier, calmer, and they help us become the best versions of ourselves.
+              Its beautiful intricate details cannot go unnoticed.</p>
+            <a href="#" class="button">Add to cart</a>
+          </li>
+          
+        </ul>
+      </section>
+   
+     
+        <div class="about">
+          <div class="text">
+            <h1>About Scarfia</h1>
+    
+           
+            
+    
+             <p>
+         Our Scarfia founders set out to create the accessory their outfits so desperately needed, and the signature scarfia duo scarf was born. 
+
+
+
+        Within 1 year, the scarfia brand grew to include more than 20 designs in over 15 collections – all with one thing in common: each was designed from scratch and handcrafted specifically for Scarfia. With every collection launched, our founders still continue to try on the scarves themselves, to ensure that our customers receive the premium quality we know they deserve.
+        
+         
+        
+        So all we’re really trying to say here is… Scarfia was created out of a desire to revive modesty, and continues to exist in all the ways that it does because of you, our beloved lady in Scarfia, and we couldn’t be more grateful.
+        
+        After all, Scarfia is more than just an online brand. We are a community.
+        
+
+      </p>
+        </div>
+     
+          <div class="image2">
+      
+            <img src="{% static 'images/About us.jpeg' %}" alt=" ">
+          
+          </div>
+      
+      
+        
+            
+         
+      </div>
+
+
+      <div class="footer">
+        <div class="col-1">
+         <h3>useful links</h3>
+   
+   
+         <a href="#">About</a>
+         <a href="#">Services</a>
+         <a href="#">Contact</a>
+         <a href="#">Shop</a>
+         <a href="#">profile</a>
+   
+       </div>
+   
+       <div class="col-2">
+          <h3>Newsettler</h3>
+   
+     
+         <input type="text" placeholder="your email address" required>
+         <br>
+         <button type="submit">Subscribe now</button>
+   
+       </div>
+   
+       <div class="col-3">
+   
+         <h3>Contact us</h3>
+         <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt </p>
+         <p><i class="fas fa-phone"></i> Phone:01010036560</p>
+         <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">info@Scarfyo.com</a></p>
+   
+         <div class="social-icons">
+          <a href="#" class="fa fa-facebook"></a>  
+          <a href="#" class="fa fa-twitter"></a>  
+          <a href="#" class="fa fa-pinterest"></a>  
+          <a href="#" class="fa fa-linkedin"></a>  
+          <a href="#" class="fa fa-instagram"></a>  
+          </div>
+  
+      </div>
+   
+       
+      </div>
+      
+      
+  </body>
+</html>

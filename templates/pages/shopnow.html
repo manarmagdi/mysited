@@ -1,0 +1,163 @@
+{% load static %}
+<link rel = "stylesheet" href = "{% static 'css/shopnow.css' %}">
+
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <meta charset="UTF-8">
+    <title>Fantasy Product Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+   
+    <link rel="stylesheet" href="main.css">
+    
+  </head>
+  <body>
+
+      <header>
+        <img src="{% static 'media/C:\Users\Manar\Desktop\prooo\mysite\mysite\static\images\scarfia.PNG' %}" alt="">
+        
+      <nav>
+       
+        <ul>
+        <li>  <a href="#"><i class="fa fa-search" style="font-size:20px"></i></a></li>
+          <li><a href="{% url 'hali' %}">Home</a></li>
+          <li><a href="{% url 'home' %}">About Us</a></li>
+          <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart" style="font-size:20px"></i></a></li>
+          <li><a href="{% url 'profile' %}"><i class="fa fa-user" style="font-size:24px"></i></a></li>
+        </ul>
+       
+      </nav>
+    </header>
+    
+
+    <div class="about">
+        <div class="image2">
+    
+            <img src="{% static 'images/fa.webp' %}">
+        
+        </div>
+    
+    
+        <div class="text">
+            <h1 id="sk">PERFECT FOR A GIFT</h1>
+    
+           
+            
+    
+            <p>All our scarves are carefully packaged in gorgeous gift boxes and can include an elegant gift card for you to personalize. At checkout, request an addition of a complimentary gift card.</p>
+    
+        </div>
+     
+          
+       
+    </div>
+  
+      <div class="products">
+        <h3>Happy shopping</h3>
+      </div>
+
+
+   
+      
+    <main class="container">
+      {% for x in scarfs %}
+
+      <div class="product-card">
+        <img src="{{ x.image.url }}" alt='Product Image'> 
+        <div class="product-info">
+     
+         
+
+          <h2>{{x.name}}</h2>
+        
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        
+          <p class="description">Material: {{x.material}}</p>
+          <p class="description">Fabric Finish: {{x.fabric_finish}}y</p>
+          <p class="description">Size:{{x.size}}, Kindly note that the scarf may vary by a couple of centimeters</p>
+          <p class="description"> Characteristic: {{x.characteristic}}</p>
+          <p class="price">EGP{{x.price}}</p>
+          
+          <a href="{{cart.re}}" class="button">Add to cart</a>
+        
+          
+        </div>
+        
+
+       
+      </div>
+
+        
+       
+
+      {% endfor %}
+     
+      
+      
+    </main>
+
+   <div class="footer">
+     <div class="col-1">
+      <h3>useful links</h3>
+
+
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <a href="#">Shop</a>
+      <a href="#">profile</a>
+
+    </div>
+
+    <div class="col-2">
+       <h3>Newsettler</h3>
+
+  
+      <input type="text" placeholder="your email address" required>
+      <br>
+      <button type="submit">Subscribe now</button>
+
+    </div>
+
+    <div class="col-3">
+
+      <h3>Contact us</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt </p>
+      <p><i class="fas fa-phone"></i> Phone:01010036560</p>
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">info@Scarfyo.com</a></p>
+
+      <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>  
+<a href="#" class="fa fa-twitter"></a>  
+<a href="#" class="fa fa-pinterest"></a>    
+<a href="#" class="fa fa-instagram"></a>  
+        </div>
+
+    </div>
+   </div>
+   
+   
+</body>
+</html>
+
+  </body>
+</html>
+
+
+<img src="{% static 'images/{{x.image}}' %}" alt="Product Image">
+
+
+

@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #000;
+}
+
+header {
+  background-image: url('header-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #7150045f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+
+
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+
+
+header img {
+  width: 150px;
+  padding-left: 30px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+}
+
+nav ul li {
+  margin-left: 40px;
+  padding-right: 40px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+main {
+  max-width: 1200px;
+
+  padding-top: 50px;
+}
+
+.hero {
+
+  background-size: cover;
+
+  text-align: center;
+
+
+}
+
+.hero img {
+  width: 1462px;
+  height: 700px;
+  margin-top: 60px;
+  margin-left: 80px;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+
+.btn {
+  position: absolute;
+  top: 700px;
+  left: 800px;
+
+  background-color: #8c612fcf;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #000000;
+}
+
+
+
+body,
+input,
+button {
+  font-family: 'Muli', sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  outline: none;
+}
+
+.main-container {
+  margin: 0px;
+  padding-top: 150px;
+  padding-left: 70px;
+
+
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.form-container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.form-body {
+  background-color: white;
+  overflow: hidden;
+  padding: 50px;
+  color: #000000;
+  border-radius: 3px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@media only screen and (max-width: 500px) {
+  .form-body {
+    padding: 50px 40px;
+  }
+}
+
+@media only screen and (max-width: 455px) {
+  .form-body {
+    padding: 45px 30px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .form-body {
+    padding: 30px 20px;
+  }
+}
+
+.form-body .title {
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+  padding-bottom: 50px;
+}
+
+
+
+.the-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.the-form label {
+  margin-bottom: 5px;
+  color: #080808;
+  font-weight: bold;
+}
+
+.the-form [type="email"],
+.the-form [type="password"],
+.the-form [type="address"],
+.the-form [type="phone"],
+.the-form [type="username"] {
+  padding: 15px;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 3px;
+  margin-bottom: 15px;
+  transition: background .3s;
+  color: #080808;
+}
+
+.the-form [type="email"]::placeholder,
+.the-form [type="password"]::placeholder,
+.the-form [type="address"]::placeholder,
+.the-form [type="phone"]::placeholder,
+.the-form [type="username"]::placeholder {
+  color: rgba(7, 7, 7, 0.3);
+}
+
+.the-form [type="email"]:hover,
+.the-form [type="password"]:hover,
+.the-form [type="address"]:hover,
+.the-form [type="phone"]:hover,
+.the-form [type="username"]:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.the-form [type="email"]:focus,
+.the-form [type="password"]:focus,
+.the-form [type="address"]:focus,
+.the-form [type="phone"]:focus,
+.the-form [type="username"]:focus {
+  background: #ffffff;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  border-color: #4a304d;
+  color: #222222;
+}
+
+.the-form [type="email"]:focus::placeholder,
+.the-form [type="password"]:focus::placeholder,
+.the-form [type="address"]:focus::placeholder,
+.the-form [type="phone"]:focus::placeholder,
+.the-form [type="username"]:focus::placeholder {
+  color: #262525;
+}
+
+.the-form [type="submit"] {
+  background: #7150045f;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 20px;
+  color: black;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.the-form [type="submit"]:hover {
+  opacity: .9;
+}
+
+.form div {
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 18px;
+  color: #060606;
+}
+
+.form div a {
+  color: #28242726;
+}
+
+
+
+
+
+.footer {
+  margin-top: 150px;
+  width: 100%;
+  padding: 100px 15%;
+  background: #333;
+  color: #efefef;
+  display: flex;
+
+}
+
+.footer div {
+  text-align: center;
+}
+
+.col-2 {
+  flex-grow: 2;
+}
+
+.footer div h3 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.col-1 a {
+  display: block;
+  text-decoration: none;
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.col-2 input {
+  width: 400px;
+  height: 45px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
+}
+
+.col-2 button {
+  background: transparent;
+  border: 2px solid#fff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 30px;
+
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+
+}
