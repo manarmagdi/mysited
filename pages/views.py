@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect 
-from .models import Signup, Product1, Product2 , Cart
+from .models import Signup, Product1, Product2
 from .forms import LogInForm 
-from django.contrib.auth.decorators import login_required 
+from django.contrib.auth import logout
 from django.core.exceptions import ObjectDoesNotExist
 
 
@@ -14,9 +14,8 @@ def Home(request):
 
 def Shopnow(request):
     scarfs = Product1.objects.all()
-    cart = Cart.objects.all()
     # print(scarfs[0])
-    context = {"scarfs": scarfs , "cart": cart}
+    context = {"scarfs": scarfs }
     return render(request, "pages/shopnow.html", context)
 
 
@@ -54,14 +53,20 @@ def signup(request):
     data = Signup(
         Email=email, Phone=phone, Address=address, Password=password, Username=username
     )
+    
     data.save()
-    return render(request, "pages/signup.html")     
+    return render(request, "pages/signup.html")
 
+def logout_view(request):
+    logout(request)
+    request.session.flush()
+    return redirect('login')
+    
 
 def cart(request):
        # Get the user's cart and all products associated with it
     try:
-        cart = Cart.objects.get(user=request.user)
+        
         products = cart.products.all()
         return render(request, "pages/cart.html" , {'cart': cart, 'products': products})
     except : # Cart.ObjectDoesNotExist:
@@ -90,7 +95,10 @@ def Hijab(request):
 def HALI(request):
     return render(request, "pages/hali.html")
 
-def Add_to_cart(request, product_id):
+
+
+
+# def Add_to_cart(request, product_id):
     # Get the product object by its ID
     product = Product1.objects.get(id=product_id)
 

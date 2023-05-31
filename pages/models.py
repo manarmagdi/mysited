@@ -1,6 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
-from django.urls import reverse
 
 # Create your models here.
 
@@ -17,7 +15,7 @@ class Signup(models.Model):
     Image = models.ImageField(upload_to="media/"  , null= True) 
     
     def __str__(self):
-        return self.Email 
+        return str(self.Email) 
 
 
 
@@ -29,8 +27,6 @@ class Product1(models.Model):
     characteristic = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to="media/")
-    def re(self):
-         return reverse('add', args=[self.id])
     
     def __str__(self):
         return self.name 
@@ -56,9 +52,6 @@ class Product2(models.Model):
     
     class Meta:
         verbose_name= 'Prayer dress'
-        
-class Cart(models.Model):
-     user = models.OneToOneField(User, on_delete=models.CASCADE)
-     products = models.ManyToManyField(Product1)
+
      
     

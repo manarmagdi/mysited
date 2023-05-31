@@ -248,20 +248,21 @@ a:hover {
   color: #262525;
 }
 
-.the-form [type="submit"] {
-  background: #7150045f;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 18px;
-  font-size: 20px;
-  border-radius: 3px;
+.the-form a {
+  background-color: #7150045f;
+  width: 800px;
+  margin-top: 70px;
+  margin-right: 00px;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
   cursor: pointer;
-  margin-top: 20px;
-  color: black;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  font-size: 16px;
+  padding: 10px 20px;
 }
 
-.the-form [type="submit"]:hover {
-  opacity: .9;
+.the-form a:hover {
+  background-color: #fff199;
 }
 
 .form div {
